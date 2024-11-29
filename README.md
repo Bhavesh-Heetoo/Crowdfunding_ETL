@@ -20,4 +20,4 @@ The following repository was created for the ETL mini project. For this project,
        2. Select the folder to open in VS code.
   4. Run the Jupyter Notebook
      1. Open the notebook file (ETL_Mini_Project_JJiang_BHeetoo_TZubi.ipynb) in VS code or Jupyter.
-     2. Run the cells.
+     2. Run the cells..
