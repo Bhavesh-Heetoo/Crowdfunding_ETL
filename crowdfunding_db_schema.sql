@@ -1,11 +1,12 @@
 ﻿
+
 CREATE TABLE "campaign" (
     "cf_id" int   NOT NULL,
-    "contact_id" varchar(200)   NOT NULL,
+    "contact_id" int   NOT NULL,
     "company_name" varchar(200)   NOT NULL,
     "description" varchar(200)   NOT NULL,
-    "goal" varchar(200)   NOT NULL,
-    "pledged" int   NOT NULL,
+    "goal" decimal   NOT NULL,
+    "pledged" decimal   NOT NULL,
     "outcome" varchar(200)   NOT NULL,
     "backers_count" int   NOT NULL,
     "country" varchar(2)   NOT NULL,
@@ -27,11 +28,11 @@ CREATE TABLE "category" (
      )
 );
 
-CREATE TABLE "subcatergory" (
+CREATE TABLE "subcategory" (
     -- PK int  FK >- dm.EmpNo
     "subcategory_id" varchar(200)   NOT NULL,
     "subcategory" varchar(200)   NOT NULL,
-    CONSTRAINT "pk_subcatergory" PRIMARY KEY (
+    CONSTRAINT "pk_subcategory" PRIMARY KEY (
         "subcategory_id"
      )
 );
@@ -54,5 +55,5 @@ ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_category_id" FOREIGN KEY("cat
 REFERENCES "category" ("category_id");
 
 ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_subcategory_id" FOREIGN KEY("subcategory_id")
-REFERENCES "subcatergory" ("subcategory_id");
+REFERENCES "subcategory" ("subcategory_id");
 
